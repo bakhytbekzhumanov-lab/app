@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #08080c;
+  --bg-card: #111118;
+  --bg-card-hover: #16161f;
+  --bg-elevated: #1a1a25;
+  --border: rgba(255, 255, 255, 0.06);
+  --border-hover: rgba(255, 255, 255, 0.12);
+  --text: #e8e6e3;
+  --text-dim: rgba(255, 255, 255, 0.4);
+  --text-mid: rgba(255, 255, 255, 0.6);
+  --accent: #4ade80;
+  --accent-dim: rgba(74, 222, 128, 0.12);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@layer utilities {
+  .skeleton {
+    @apply animate-pulse bg-bg-elevated rounded;
+  }
+}
